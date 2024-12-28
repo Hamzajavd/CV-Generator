@@ -1,0 +1,461 @@
+/* Apply styles to the body */
+/* Set the basic styling for the body and HTML */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+html, body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Montserrat", serif; 
+    letter-spacing: 1px;
+    background-size: cover; /* Ensure the image covers the whole page */
+    background-position: center; /* Center the image */
+}
+
+#heading {
+    position: absolute;  /* Positioning it absolutely within the body */
+    right: 10%;  /* Aligns the heading to the right side */
+    top: 50%;  /* Vertically center the heading */
+    transform: translateY(-50%);  /* Adjusts the heading to be perfectly centered vertically */
+    color: #ff9900;  /* Orange color */
+    font-size: 70px;  /* Font size */
+}
+
+#text{
+    position: absolute;  /* Positioning it absolutely within the body */
+    right: 10%;  /* Aligns the heading to the right side */
+    top: 64%;  /* Vertically center the heading */
+    transform: translateY(-50%);  /* Adjusts the heading to be perfectly centered vertically */
+    color: #ffffff;  /* Orange color */
+    font-size: 19.7px;  /* Font size */
+}
+/* Style the container card */
+#card {
+    margin-top: 20px;
+    padding-right: 50px;
+    color: #ff9900; /* Set text color to orange */
+    width: 350px;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    padding: 40px;
+    padding-left: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #ff9900; /* Orange glow shadow */
+    margin-left: 100px;
+    text-align: center;
+    justify-content: center;
+    position: relative; /* Required for positioning pseudo-elements */
+    overflow: hidden; /* Ensure border animation stays within bounds */
+    border: 2px solid transparent; /* Initial transparent border */
+    background-clip: padding-box; /* Ensure background doesn't overlap the border */
+}
+
+/* Add border animation to the card */
+#card:hover {
+    animation: borderAnimation 2s ease-in-out infinite;
+}
+
+/* Define the border animation */
+@keyframes borderAnimation {
+    0% {
+        border-width: 2px;
+        border-color: transparent;
+    }
+    25% {
+        border-width: 5px;
+        border-color: #ff9900; /* Orange color for border */
+    }
+    50% {
+        border-width: 2px;
+        border-color: transparent;
+    }
+    75% {
+        border-width: 5px;
+        border-color: #ff9900; /* Orange color for border */
+    }
+    100% {
+        border-width: 2px;
+        border-color: transparent;
+    }
+}
+/* Style the image inside the card */
+#profile {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* Style the labels */
+#card label {
+    
+    padding-right: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Style the input fields */
+#card input[type="text"], #card input[type="tel"], #card input[type="file"] {
+    padding: 5px;
+    margin-top: 10px;
+    color: white;
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+
+
+/* Style the checkboxes */
+/* General button styling */
+button {
+    padding: 12px 25px;  /* Padding for size */
+    font-size: 16px;  /* Font size */
+    border: none;  /* Remove the default border */
+    border-radius: 8px;  /* Rounded corners */
+    color: white;  /* White text color */
+    background-color: #4CAF50;  /* Default green background */
+    cursor: pointer;  /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease;  /* Smooth transition for background color and hover effect */
+    margin: 10px;  /* Margin between buttons */
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #45a049;  /* Darker green when hovered */
+    transform: scale(1.05);  /* Slightly increase the size on hover */
+}
+
+/* Specific styles for each theme button */
+#theme1 {
+    background-color: #ff9900;  /* Orange background */
+}
+
+#theme1:hover {
+    background-color: #ffffff;  /* Darker orange on hover */
+}
+
+#theme2 {
+    background-color: #141414;  /* Green background */
+}
+
+#theme2:hover {
+    background-color: #ff9900;  /* Darker green on hover */
+}
+
+#theme3 {
+    background-color: #ffffff;  /* Red background */
+}
+
+#theme3:hover {
+    background-color: #050505;  /* Darker red on hover */
+}
+
+
+/* Style the button */
+#btn {
+    font-family: "Montserrat", serif;
+    font-weight: bolder;
+    background-color: #ff9900; /* Green background */
+    color: rgb(17, 17, 17);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#btn:hover {
+    background-color: #ffffff;
+}
+
+/* Style the result container */
+
+/* Style for images and labels inside the card */
+#card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+#Uploadtext{
+    margin: 10px 0;
+    width: 100%;
+    /* cursor: text; */
+}
+
+
+#Upload {
+  display: none;
+  cursor: pointer;
+}
+
+#Uploadtext{
+    margin-left: 85px;
+    font-weight: 1000;
+    text-transform: uppercase;
+    padding-top: 10px;
+    width: 180px;
+    height: 30px;
+    color: rgb(14, 13, 13);
+    cursor: pointer;
+    background-color: #ff9900;
+}
+
+
+/* Styling for each result container */
+#result-container,
+#result-container2,
+#result-container3 {
+    display: inline-block; /* Make each container inline-block */
+    border: none;
+    
+    color: white; /* Set text color to white */
+    width: 25%; /* Each container takes up 30% of the width */
+    padding: 40px;
+    padding-left: 30px;
+    border-radius: 10px; 
+    text-align: center;
+    justify-content: center;
+    margin-top: 50px; /* Add some spacing from top */
+    margin-left: 725px; /* Space between containers */
+}
+
+/* Specific background colors for each container */
+#result-container {
+    font-weight: bolder;
+    color: black;
+    background-color: #ff9900; /* Orange background */
+    text-align: left; /* Align text to the left */
+    font-family: "Montserrat", serif; /* Set a clean font */
+    font-size: 16px; /* Set an appropriate font size */
+    line-height: 1.5; /* Set line height for readability */
+}
+
+#result-container2 {
+    font-weight: bolder;
+    color: rgb(255, 255, 255); 
+    text-align: left; /* Align text to the left */
+    font-family: "Montserrat", serif; /* Set a clean font */
+    font-size: 16px; /* Set an appropriate font size */
+    line-height: 1.5; 
+    background-color: #0e0e0e; /* Green background */
+}
+
+#result-container3 {
+    font-weight: bolder;
+    color: black;
+    text-align: left; /* Align text to the left */
+    font-family: "Montserrat", serif; /* Set a clean font */
+    font-size: 16px; /* Set an appropriate font size */
+    line-height: 1.5; 
+    color: #050505;
+    background-color: #ffffff; /* Red background */
+}
+
+
+#DoB {
+    padding: 8px; /* Apply padding */
+    margin: 5px 0; /* Apply margin */
+    color: #0a0a0a;
+    width: 100%;
+    background-color: #ff9900;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition for background and border */
+}
+
+/* Add hover effect */
+#DoB:hover {
+    background-color: white; /* Change background to white on hover */
+    border-color: #ff9900; /* Optionally, change border color on hover */
+}
+
+#Email{
+   padding: 5px;
+    margin-top: 10px;
+    color: white;
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+
+#Address{
+    padding: 5px;
+    margin-top: 10px;
+    color: white;
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+
+#hding{
+    position: fixed;
+    padding-left: 120px;
+    position: absolute;  /* Positioning it absolutely within the body */  /* Aligns the heading to the right side */
+    top: 1270px;  /* Vertically center the heading */
+    transform: translateY(-50%);  /* Adjusts the heading to be perfectly centered vertically */
+    color: #ff9900;  /* Orange color */
+    font-size: 50px;  /* Font size */
+}
+
+#line{
+    letter-spacing: 10.5px;
+    padding-left: 120px;
+    position: absolute;  /* Positioning it absolutely within the body */  /* Aligns the heading to the right side */
+    top: 1325px;  /* Vertically center the heading */
+    transform: translateY(-50%);  /* Adjusts the heading to be perfectly centered vertically */
+    color: #ffffff;  /* Orange color */
+    font-size: 28px;  /* Font size */
+}
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Circular profile image */
+    object-fit: cover; /* Ensures the image is scaled correctly */
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Style for the profile section (name and profile image) */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+
+/* For small screens (Mobile Phones) */
+@media only screen and (max-width: 600px) {
+    #heading {
+        font-size: 40px;  /* Smaller heading font size */
+        right: 5%;
+    }
+
+    #text {
+        font-size: 16px;
+        right: 5%;
+        top: 58%;
+    }
+
+    #card {
+        width: 90%;
+        margin-left: 5%;
+        padding: 20px;
+    }
+
+    #profile {
+        width: 80px;
+        height: 80px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    #btn {
+        padding: 12px 20px;
+    }
+
+    #result-container, #result-container2, #result-container3 {
+        width: 100%;
+        padding: 20px;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* For the bottom-fixed elements (heading, line) */
+    #hding {
+        font-size: 30px;  /* Adjust font size for smaller screens */
+        top: 100%;  /* Adjust position to fit smaller screens */
+    }
+
+    #line {
+        font-size: 18px;  /* Adjust font size for smaller screens */
+    }
+}
+
+/* For larger screens (Tablets and above) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    #heading {
+        font-size: 55px;  /* Slightly smaller than desktop but larger than mobile */
+    }
+
+    #card {
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    #result-container, #result-container2, #result-container3 {
+        width: 45%;
+    }
+
+    .profile-img {
+        width: 110px;
+        height: 110px;
+    }
+
+    #hding {
+        font-size: 40px;  /* Adjust font size for medium screens */
+    }
+
+    #line {
+        font-size: 22px;  /* Adjust font size for medium screens */
+    }
+}
+
+/* For very large screens (Desktop and larger) */
+@media only screen and (min-width: 1025px) {
+    #heading {
+        font-size: 70px;  /* Keep the original size for desktop */
+    }
+
+    #card {
+        width: 350px;
+        margin-left: 100px;
+    }
+
+    #result-container, #result-container2, #result-container3 {
+        width: 25%;
+        margin-left: 725px;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    #hding {
+        font-size: 50px;  /* Keep the original size for larger screens */
+        top: 1270px;
+    }
+
+    #line {
+        font-size: 28px;  /* Keep the original size for larger screens */
+    }
+}
+
